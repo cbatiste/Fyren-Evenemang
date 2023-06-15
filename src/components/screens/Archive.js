@@ -10,11 +10,11 @@ export default function Archive() {
           poster={'/posters/oxidposterprint3.jpeg'}
           date={'09.03.2023'}
           photos={[
-            {url: '/archive/Untitled-1-Recovered_01.jpg', aspectRatio: 3/5},
-            {url: '/archive/Untitled-1-Recovered_02.jpg', aspectRatio: 3/5},
-            {url: '/archive/Untitled-1-Recovered_03.jpg', aspectRatio: 3/5},
-            {url: '/archive/Untitled-1-Recovered_04.jpg', aspectRatio: 3/5},
-            {url: '/archive/Untitled-1-Recovered_05.jpg', aspectRatio: 3/5},
+            {url: '/archive/Untitled-1-Recovered_01.JPG', aspectRatio: 3/5},
+            {url: '/archive/Untitled-1-Recovered_02.JPG', aspectRatio: 3/5},
+            {url: '/archive/Untitled-1-Recovered_03.JPG', aspectRatio: 3/5},
+            {url: '/archive/Untitled-1-Recovered_04.JPG', aspectRatio: 3/5},
+            {url: '/archive/Untitled-1-Recovered_05.JPG', aspectRatio: 3/5},
           ]}
         />
       </motion.div>

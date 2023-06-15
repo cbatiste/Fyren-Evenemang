@@ -23,7 +23,7 @@ export default function About() {
         <Profile
           name={'Erik "Kasizzle" Larsson'}
           position={'CEO, Founder'}
-          description={`Erik Larson was a multi-billionaire by the age 21, he started oft his career as a DU then slowly moved
+          description={`Erik Larson was a multi-billionaire by the age 21, he started off his career as a DU then slowly moved
                       to becoming an entrepreneur doing all things he loved. He has many accomplishments such as fucking your mother.`}
           image={'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'}
         />

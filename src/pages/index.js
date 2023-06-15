@@ -1,56 +1,36 @@
-import Image from 'next/Image';
-import {FaInstagram, FaPhone, FaRegEnvelope, FaTiktok} from "react-icons/fa";
+import Image from 'next/image';
+import { motion } from "framer-motion";
+
+import Navigator from 'components/screens/Navigator';
+import ContactFooter from 'components/ContactFooter';
+
+import UpcomingScreen from 'components/screens/Upcoming';
+import ArchiveScreen from 'components/screens/Archive';
+import AboutScreen from 'components/screens/About';
+import CollaboratorsScreen from 'components/screens/Collaborators';
 
 export default function Home() {
+  const navigationScreens = [
+    {id: "upcoming", title: "UPCOMING", component: <UpcomingScreen />},
+    {id: "archive", title: "ARCHIVE", component: <ArchiveScreen />},
+    {id: "about", title: "ABOUT US", component: <AboutScreen />},
+    {id: "collaborators", title: "COLLABORATORS", component: <CollaboratorsScreen />},
+  ]
+
   return (
-    <main className={`flex min-h-screen flex-col items-center p-6 text-zinc-900`} >
-      <section className={'flex flex-row'}>
-        <h3 className={'py-20 px-10 text-3xl font-bold'}>FYREN</h3>
-        <Image src={'/Fyren-Standard-Logo.png'} className={'w-48'} alt={'Fyren logo'} />
-        <h3 className={'py-20 px-10 text-3xl font-bold'}>ONLINE</h3>
-      </section>
-      <section className={'flex flex-col self-start place-content-start pt-16 px-12 lg:px-48'}>
-        <h2 className={'text-5xl py-2 font-bold'}>EVENTS</h2>
-        <h2 className={'text-5xl py-2 font-bold'}>ABOUT US</h2>
-        <h2 className={'text-5xl py-2 font-bold'}>COLLABORATORS</h2>
-      </section>
-      <section className={'flex flex-col self-start pt-24 px-8 lg:px-36 w-full'}>
-        <h3 className={'flex text-4xl font-semibold'}>CONTACT US</h3>
-        <div className={'flex grid grid-cols-3 gap-8 pt-12 px-12'}>
-          <div>
-            <p className={'text-3xl'}>Contact</p>
-          </div>
-          <div className={'text-xl'}>
-            <div>
-              <p><FaRegEnvelope className={'inline mr-4'} /><span>info@fyren.se</span></p>
-              <label className={'text-sm text-zinc-600 pl-9'}>(General information and questions)</label>
-            </div>
-            <div className={'pt-6'}>
-              <p><FaRegEnvelope className={'inline mr-4'} /><span>erik@kasizzle.se</span></p>
-              <label className={'text-sm text-zinc-600 pl-9'}>(Erik Larsson, CEO)</label>
-            </div>
-          </div>
-          <div className={'text-xl'}>
-            <div>
-              <p><FaPhone className={'inline mr-4'} /><span>+46 70 860 19 31</span></p>
-              <label className={'text-sm text-zinc-600 pl-9'}>(Erik Larsson, CEO)</label>
-            </div>
-            <div className={'pt-6'}>
-              <p><FaPhone className={'inline mr-4'} /><span>+46 73 066 62 84</span></p>
-              <label className={'text-sm text-zinc-600 pl-9'}>(Oscar Fredell, CTO)</label>
-            </div>
-          </div>
-          <div>
-            <p className={'text-3xl pt-5'}>Social</p>
-          </div>
-          <div className={'text-xl pt-5'}>
-            <p title={'Instagram'}><FaInstagram className={'inline mr-4 text-3xl'} /><span>@fyren.se</span></p>
-          </div>
-          <div className={'text-xl pt-5'}>
-            <p title={'TikTok'}><FaTiktok className={'inline mr-4 text-2xl'} /><span>@fyren</span></p>
-          </div>
+    <main className={`flex min-h-screen flex-col text-zinc-900`}>
+      <section className={'flex flex-col mb-64 w-full'}>
+        <motion.div className={'flex flex-row self-center pt-4 select-none'} initial={{opacity: 0}}
+                    animate={{opacity: 1}} transition={{duration: 0.5}}>
+          <h3 className={'py-20 px-10 text-3xl font-bold'}>FYREN</h3>
+          <Image src={'/Fyren-Display-Logo.png'} width={192} height={302} alt={'Fyren logo'} priority />
+          <h3 className={'py-20 px-10 text-3xl font-bold'}>ONLINE</h3>
+        </motion.div>
+        <div className={'flex flex-col pt-24 px-12 lg:px-48'}>
+          <Navigator screens={navigationScreens} />
         </div>
       </section>
+      <ContactFooter/>
     </main>
   )
 }

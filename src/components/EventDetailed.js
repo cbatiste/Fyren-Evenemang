@@ -16,16 +16,20 @@ export default function EventDetailed(props) {
   return (
     <div className={'flex flex-col md:flex-row justify-center py-12'}>
       <div className={'flex order-2 mt-6 md:m-0 md:mr-6 md:order-1 flex-col justify-center flex-1 text-center'}>
-        <h2 className={'text-4xl'}>{title}</h2>
+        <h2 className={'text-4xl font-semibold'}>{title}</h2>
 
-        <a className={'block md:hidden text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700 mt-3'} onClick={() => setLineupVisible(true)}>View Lineup</a>
-        <LineupOverlay
-          title={title}
-          artistLineup={artistLineup}
-          DJLineup={DJLineup}
-          visible={lineupVisible}
-          onClose={() => setLineupVisible(false)}
-        />
+        <div className={'mt-3 md:m-0'}>
+          <a className={'inline md:hidden text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'} onClick={() => setLineupVisible(true)}>
+            <h6 className={'inline'}>View Lineup</h6>
+          </a>
+          <LineupOverlay
+            title={title}
+            artistLineup={artistLineup}
+            DJLineup={DJLineup}
+            visible={lineupVisible}
+            onClose={() => setLineupVisible(false)}
+          />
+        </div>
 
         <div className={'pt-5'}>
           {details.map((detail, i) => (

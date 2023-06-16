@@ -56,7 +56,7 @@ export default function Navigator({ screens }) {
     setActiveScreen(current => {
       if (selected !== current && current !== -1) {
         window.requestAnimationFrame(() => {
-          window.scrollTo(0, 280 + selected * 80);
+          window.scrollTo(0, 280 + selected * 60);
         });
       }
 

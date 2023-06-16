@@ -1,12 +1,12 @@
 function Profile({name, position, description, image}) {
   return (
-    <div className={'flex flex-row mb-6'}>
-      <div className={'basis-3/4 self-center pr-6'}>
-        <h5 className={'text-3xl font-semibold'}>{name}</h5>
-        <p className={'text-xl mt-1 italic'}>{position}</p>
+    <div className={'flex flex-col md:flex-row mb-12 sm:mb-6'}>
+      <div className={'order-2 md:order-1 md:basis-3/4 self-center md:pr-6'}>
+        <h5 className={'text-2xl sm:text-3xl font-semibold'}>{name}</h5>
+        <p className={'text-lg sm:text-xl mt-1 italic'}>{position}</p>
         <p className={'mt-4'}>{description}</p>
       </div>
-      <div className={'basis-1/4 p-4'}>
+      <div className={'self-center order-1 md:order-2 md:basis-1/4 p-4 min-w-[200px] max-w-[280px] lg:max-w-none'}>
         <img src={image} alt={`Photo of ${name}`} style={{width: '100%', height: 'auto'}} />
       </div>
     </div>
@@ -17,9 +17,9 @@ function Profile({name, position, description, image}) {
 export default function About() {
   return (
     <section className={'pb-8'}>
-      <p className={'text-[2.5rem] mt-4'}>Our Team</p>
+      <p className={'text-3xl sm:text-[2.5rem] mt-4 mb-8 xl:mb-2'}>Our Team</p>
 
-      <div className={'px-8'}>
+      <div className={'px-0 sm:px-8'}>
         <Profile
           name={'Erik "Kasizzle" Larsson'}
           position={'CEO, Founder'}

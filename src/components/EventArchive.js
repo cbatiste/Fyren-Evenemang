@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Image from 'next/image';
-import PhotoWall from 'components/PhotoWall'
+import PhotoWallOverlay from 'components/PhotoWallOverlay'
 
 export default function EventArchive(props) {
   const {
@@ -26,7 +26,7 @@ export default function EventArchive(props) {
             <h6>Photo Album</h6>
           </a>
 
-          <PhotoWall
+          <PhotoWallOverlay
             title={title}
             description={date}
             photos={photos}

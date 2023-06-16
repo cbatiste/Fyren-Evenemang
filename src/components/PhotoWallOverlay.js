@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from "react";
+import React, {useState, useEffect} from "react";
 import {motion, AnimatePresence} from "framer-motion";
 import Gallery from "react-photo-gallery";
 import {FaTimes} from "react-icons/fa";
@@ -36,7 +36,7 @@ function GalleryImage({index, photo, top, left, direction}) {
   )
 }
 
-export default function PhotoWall(props) {
+export default function PhotoWallOverlay(props) {
   useEffect(() => {
     document.body.style.overflow = props.visible ? 'hidden' : 'initial';
   }, [props.visible]);

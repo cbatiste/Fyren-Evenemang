@@ -13,7 +13,6 @@ function Profile({name, position, description, image}) {
   );
 }
 
-
 export default function About() {
   return (
     <section className={'pb-8'}>

@@ -9,3 +9,9 @@ html {
 body {
   background: #f5f8f8;
 }
+
+@media only screen and (max-width: 360px) {
+  html, body {
+    font-size: 12px;
+  }
+}

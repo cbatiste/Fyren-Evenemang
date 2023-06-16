@@ -6,7 +6,7 @@ export default function ContactFooter() {
       <h3 className={"flex text-4xl font-semibold"}>CONTACT US</h3>
       <div className={"flex grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 lg:px-12"}>
         <div>
-          <p className={"text-2xl sm:text-3xl"}>Contact</p>
+          <p className={"text-2xl md:pl-12 lg:p-0 sm:text-3xl"}>Contact</p>
         </div>
         <div className={"text-lg sm:text-xl"}>
           <div>
@@ -31,7 +31,7 @@ export default function ContactFooter() {
           </div>
         </div>
         <div>
-          <p className={"text-2xl sm:text-3xl pt-5"}>Social</p>
+          <p className={"text-2xl md:pl-12 lg:p-0 sm:text-3xl pt-5"}>Social</p>
         </div>
         <div className={"text-lg sm:text-xl pt-2 sm:pt-5"}>
           <a title={"Instagram"} href={"https://instagram.com/fyren.se"} target={"_blank"}><FaInstagram

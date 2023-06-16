@@ -4,7 +4,7 @@ import Gallery from "react-photo-gallery";
 import {FaTimes} from "react-icons/fa";
 import {AiOutlineLoading} from "react-icons/ai";
 
-function GalleryImage({index, photo, margin, top, left, direction}) {
+function GalleryImage({index, photo, top, left, direction}) {
   let [loaded, setLoaded] = useState(false);
   let cont = {};
 

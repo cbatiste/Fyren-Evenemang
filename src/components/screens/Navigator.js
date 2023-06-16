@@ -10,7 +10,7 @@ function SectionHeader({ title, active, onSelect }) {
 
   return (
     <h3
-      className={`inline-block text-5xl py-3 font-bold cursor-pointer select-none`}
+      className={`inline-block text-4xl md:text-5xl py-2 md:py-3 font-black cursor-pointer select-none`}
       onClick={(e) => {
         onSelect(e);
       }}

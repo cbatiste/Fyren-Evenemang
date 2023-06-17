@@ -1,13 +1,20 @@
+import DynamicImage from "../DynamicImage";
+
 function Profile({name, position, description, image}) {
   return (
-    <div className={'flex flex-col md:flex-row mb-12 sm:mb-6'}>
-      <div className={'order-2 md:order-1 md:basis-3/4 self-center md:pr-6'}>
+    <div className={'flex flex-col md:flex-row mb-12 md:mb-6'}>
+      <div className={'order-2 md:order-1 md:basis-3/4 self-center md:pr-6 md:py-6'}>
         <h5 className={'text-2xl sm:text-3xl font-semibold'}>{name}</h5>
         <p className={'text-lg sm:text-xl mt-1 italic'}>{position}</p>
         <p className={'mt-4'}>{description}</p>
       </div>
-      <div className={'self-center order-1 md:order-2 md:basis-1/4 p-4 min-w-[200px] max-w-[280px] lg:max-w-none'}>
-        <img src={image} alt={`Photo of ${name}`} style={{width: '100%', height: 'auto'}} />
+
+      <div className={'self-center order-1 md:order-2 md:basis-1/4 p-4'}>
+        <DynamicImage
+          className={'m-auto min-w-[200px] max-w-[60%] sm:max-w-[280px] lg:max-w-none'}
+          src={image}
+          alt={`Photo of ${name}`}
+        />
       </div>
     </div>
   );
@@ -53,11 +60,11 @@ export default function About() {
         <Profile
           name={'Colin Adlivankin'}
           position={'Social Media Manager, TikTok'}
-          description={<p>We got a number one victory royale <br/>
+          description={<span>We got a number one victory royale <br/>
             Yeah. Fortnite, we bout to get down (Get down) <br/>
             Ten kills on the board right now <br/>
             Just wiped out Tomato Town <br/>
-            My friend just got downed</p>}
+            My friend just got downed</span>}
           image={'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'}
         />
 

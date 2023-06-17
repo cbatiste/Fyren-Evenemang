@@ -1,6 +1,6 @@
 import {useState} from "react";
-import Image from 'next/image';
 import LineupOverlay from "components/LineupOverlay";
+import DynamicImage from "./DynamicImage";
 
 export default function EventDetailed(props) {
   const {
@@ -37,10 +37,16 @@ export default function EventDetailed(props) {
           ))}
         </div>
       </div>
-      <div className={'order-1 md:order-2 md:w-[240px] lg:w-[300px] max-w-[300px] self-center'}>
-        <Image src={poster} alt={`Poster for event ${title}`} width={0} height={0} style={{width: '100%', height: 'auto'}} />
+      <div className={'order-1 md:order-2 self-center'}>
+        <DynamicImage
+          className={'md:w-[240px] lg:w-[300px] max-w-[300px]'}
+          src={poster}
+          alt={`Poster for event ${title}`}
+          defaultHeight={500}
+          showLoadingIndicator
+        />
       </div>
-      <div className={'flex order-3 md:ml-6 flex-col flex-1 text-center md:pt-8'}>
+      <div className={'flex order-3 flex-col flex-1 text-center md:pt-8'}>
         <div className={'hidden md:block'}>
           {artistLineup.length &&
             <div className={'pb-8'}>

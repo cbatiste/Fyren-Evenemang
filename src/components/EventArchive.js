@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Image from 'next/image';
 import PhotoWallOverlay from 'components/PhotoWallOverlay'
+import DynamicImage from "./DynamicImage";
 
 export default function EventArchive(props) {
   const {
@@ -18,9 +18,13 @@ export default function EventArchive(props) {
         <h2 className={'text-4xl font-semibold'}>{title}</h2>
       </div>
       <div className={'order-1 md:order-2 self-center'}>
-        <div className={'md:order-2 md:w-[240px] lg:w-[300px] max-w-[300px]'}>
-         <Image src={poster} alt={`Poster for event ${title}`}  width={0} height={0} style={{width: '100%', height: 'auto'}} />
-        </div>
+        <DynamicImage
+          className={'md:w-[240px] lg:w-[300px] max-w-[300px]'}
+          src={poster}
+          alt={`Poster for event ${title}`}
+          defaultHeight={500}
+          showLoadingIndicator
+        />
 
         <div className={'text-center m-4'}>
           <a className={'hidden md:inline text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}

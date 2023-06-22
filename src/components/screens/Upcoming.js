@@ -10,7 +10,7 @@ const datePassed = (date1, date2) =>
 export default function Upcoming() {
   const eventData = useContext(DataContext).events;
 
-  let events = eventData ? eventData.result.filter(event =>
+  let events = eventData ? eventData.filter(event =>
     !datePassed(event.date, Date.now())
   ) : null;
 
@@ -25,7 +25,7 @@ export default function Upcoming() {
             transition={{ease:'easeInOut',duration:0.5}}
             key={i}
           >
-            <EventDetailed title={event.name} poster={event.poster.url} details={[
+            <EventDetailed title={event.name} poster={event.poster} details={[
               {key: 'Date', value: event.date},
               {key: 'Time', value: `${event.timeStart} - ${event.timeEnd}`},
               {key: 'Location', value: event.location},
@@ -33,7 +33,7 @@ export default function Upcoming() {
               {key: 'Tickets', value: event.tickets}
             ]} artistLineup={event.lineupArtists} DJLineup={event.lineupDJs} />
           </motion.div>
-        )) : <p className={'text-center text-xl pt-12 pb-8'}>Come back soon, next event TBA</p>
+        )) : <p className={'text-center text-lg sm:text-xl pt-12 pb-8'}>Next event TBA, check back soon</p>
       }
     </section>
   )

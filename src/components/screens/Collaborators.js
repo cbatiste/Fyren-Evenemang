@@ -7,7 +7,7 @@ export default function Collaborators() {
         <DynamicImage className={'inline-block m-1 sm:m-2 md:m-4 w-[280px] sm:w-[380px] md:w-[510px]'}
                       alt={'Oxid Bar'}
                       defaultHeight={120}
-                      src={'https://resources.mynewsdesk.com/image/upload/w_600/eq9r4gqnecmtj6redmfe'} />
+                      src={'https://resources.mynewsdesk.com/image/upload/w_600/eq9r4gqnecmtj6redmfe'}/>
       </div>
       <div>
         <DynamicImage className={'inline-block m-1 sm:m-2 md:m-4 w-[120px] sm:w-[150px] md:w-[200px]'}

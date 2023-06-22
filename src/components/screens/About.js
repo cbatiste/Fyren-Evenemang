@@ -84,7 +84,7 @@ export default function About() {
               image={member.photo.url}
               key={i}
             />
-          )) : <p className={'text-center text-xl pt-12 pb-8'}>We lost the whole team</p>
+          )) : <p className={'text-center text-lg sm:text-xl pt-12 pb-8'}>We lost the whole team</p>
         }
       </div>
     </section>

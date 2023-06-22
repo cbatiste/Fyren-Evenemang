@@ -1,10 +1,11 @@
 import 'styles/globals.css'
 import Head from "next/head";
-import { Urbanist, Work_Sans } from 'next/font/google'
-const work_sans = Work_Sans({ subsets: ['latin'] });
-const urbanist = Urbanist({ subsets: ['latin'] });
+import {Urbanist, Work_Sans} from 'next/font/google'
 
-export default function App({ Component, pageProps }) {
+const work_sans = Work_Sans({subsets: ['latin']});
+const urbanist = Urbanist({subsets: ['latin']});
+
+export default function App({Component, pageProps}) {
   return (
     <>
       <Head>
@@ -14,12 +15,12 @@ export default function App({ Component, pageProps }) {
         html {
           font-family: ${work_sans.style.fontFamily};
         }
-        
-        h1, h2, h3, h4 ,h5, h6 {
+
+        h1, h2, h3, h4, h5, h6 {
           font-family: ${urbanist.style.fontFamily};
         }
       `}</style>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
     </>
   );
 }

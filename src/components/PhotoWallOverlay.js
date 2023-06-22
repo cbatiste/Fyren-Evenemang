@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import imageUrlBuilder from '@sanity/image-url'
-import {motion, AnimatePresence} from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 import Gallery from "react-photo-gallery";
 import {FaTimes} from "react-icons/fa";
 import {SanityClient} from 'components/utility/SanityClient';
@@ -18,9 +18,9 @@ function GalleryImage({index, photo, top, left, direction}) {
       key={index}
     >
       <motion.img
-        initial={{ opacity: 0 }}
-        animate={{ opacity: loaded ? 1 : 0 }}
-        transition={{delay: index/15, duration: 0.5}}
+        initial={{opacity: 0}}
+        animate={{opacity: loaded ? 1 : 0}}
+        transition={{delay: index / 15, duration: 0.5}}
         width={photo.width}
         height={photo.height}
         src={image(photo.src).quality(75).url()}
@@ -54,9 +54,9 @@ export default function PhotoWallOverlay(props) {
       {(props.visible &&
         <motion.div
           className={'fixed inset-0 bg-neutral-900 text-white md:px-12 py-16 z-10 overflow-auto'}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          exit={{opacity: 0}}
         >
           <div className={'flex flex-row w-full justify-between px-6 sm:px-8'}>
             <div className={'text-left'}>
@@ -65,8 +65,9 @@ export default function PhotoWallOverlay(props) {
             </div>
 
             <div className={'flex flex-col'}>
-              <div className={'rounded-full p-1 border-2 border-transparent hover:border-white transition ease-in duration-100 cursor-pointer'}
-                   onClick={() => props.onClose()}>
+              <div
+                className={'rounded-full p-1 border-2 border-transparent hover:border-white transition ease-in duration-100 cursor-pointer'}
+                onClick={() => props.onClose()}>
                 <FaTimes className={'text-4xl'} title={'Close photo album'}/>
               </div>
             </div>
@@ -81,8 +82,9 @@ export default function PhotoWallOverlay(props) {
             />
           </div>
           <div>
-            <button className={'transition border-white border-2 rounded px-4 py-2 text-md sm:text-lg hover:bg-neutral-700'}
-                    onClick={() => props.onClose()}>
+            <button
+              className={'transition border-white border-2 rounded px-4 py-2 text-md sm:text-lg hover:bg-neutral-700'}
+              onClick={() => props.onClose()}>
               Close photo album
             </button>
           </div>

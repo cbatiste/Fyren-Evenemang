@@ -12,7 +12,7 @@ export default function EventArchive(props) {
   } = props;
 
   let [galleryVisible, setGalleryVisible] = useState(false);
-console.log(poster)
+
   return (
     <div className={'flex flex-col md:flex-row justify-center py-12'}>
       <div className={'flex order-2 pt-2 px-4 md:py-0 md:order-1 flex-col justify-center flex-1'}>
@@ -33,20 +33,20 @@ console.log(poster)
         <div className={'text-center m-4'}>
           {
             (photos && photos.length) ?
-            <div>
-              <a className={'hidden md:inline text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}
-               onClick={() => setGalleryVisible(true)}>
-                <h6 className={'inline'}>Photo Album</h6>
-              </a>
+              <div>
+                <a className={'hidden md:inline text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}
+                   onClick={() => setGalleryVisible(true)}>
+                  <h6 className={'inline'}>Photo Album</h6>
+                </a>
 
-              <PhotoWallOverlay
-                title={title}
-                description={date}
-                photos={photos}
-                visible={galleryVisible}
-                onClose={() => setGalleryVisible(false)}
-              />
-            </div> : ''
+                <PhotoWallOverlay
+                  title={title}
+                  description={date}
+                  photos={photos}
+                  visible={galleryVisible}
+                  onClose={() => setGalleryVisible(false)}
+                />
+              </div> : ''
           }
         </div>
       </div>

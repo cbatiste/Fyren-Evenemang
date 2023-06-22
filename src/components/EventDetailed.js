@@ -20,7 +20,8 @@ export default function EventDetailed(props) {
         <h2 className={'text-4xl font-semibold'}>{title}</h2>
 
         <div className={'mt-3 md:m-0'}>
-          <a className={'inline md:hidden text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'} onClick={() => setLineupVisible(true)}>
+          <a className={'inline md:hidden text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}
+             onClick={() => setLineupVisible(true)}>
             <h6 className={'inline'}>View Lineup</h6>
           </a>
           <LineupOverlay
@@ -63,7 +64,8 @@ export default function EventDetailed(props) {
           }
         </div>
         <div>
-          <button className={'border-slate-900 mt-4 md:m-0 border-2 rounded px-4 py-2 text-xl'}><h6>BUY TICKETS</h6></button>
+          <button className={'border-slate-900 mt-4 md:m-0 border-2 rounded px-4 py-2 text-xl'}><h6>BUY TICKETS</h6>
+          </button>
         </div>
       </div>
     </div>

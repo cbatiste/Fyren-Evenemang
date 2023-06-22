@@ -22,7 +22,7 @@ export default function Upcoming() {
             initial={{opacity: 0, translateY: 30}}
             whileInView={{opacity: 1, translateY: 0}}
             viewport={{margin: '-120px', once: true}}
-            transition={{ease:'easeInOut',duration:0.5}}
+            transition={{ease: 'easeInOut', duration: 0.5}}
             key={i}
           >
             <EventDetailed title={event.name} poster={event.poster} details={[
@@ -31,7 +31,7 @@ export default function Upcoming() {
               {key: 'Location', value: event.location},
               {key: 'Address', value: event.address},
               {key: 'Tickets', value: event.tickets}
-            ]} artistLineup={event.lineupArtists} DJLineup={event.lineupDJs} />
+            ]} artistLineup={event.lineupArtists} DJLineup={event.lineupDJs}/>
           </motion.div>
         )) : <p className={'text-center text-lg sm:text-xl pt-12 pb-8'}>Next event TBA, check back soon</p>
       }

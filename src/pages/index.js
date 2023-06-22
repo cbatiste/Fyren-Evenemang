@@ -25,14 +25,14 @@ export default function Home() {
   }`;
 
   let eventData = useSanityQuery(eventsQuery);
-  let teamMembersData =  useSanityQuery(teamMembersQuery);
+  let teamMembersData = useSanityQuery(teamMembersQuery);
   let apiData = {events: eventData, teamMembers: teamMembersData};
 
   const navigationScreens = [
-    {id: "upcoming", title: "UPCOMING", component: <UpcomingScreen />},
-    {id: "archive", title: "ARCHIVE", component: <ArchiveScreen />},
-    {id: "about", title: "ABOUT US", component: <AboutScreen />},
-    {id: "collaborators", title: "COLLABORATORS", component: <CollaboratorsScreen />},
+    {id: "upcoming", title: "UPCOMING", component: <UpcomingScreen/>},
+    {id: "archive", title: "ARCHIVE", component: <ArchiveScreen/>},
+    {id: "about", title: "ABOUT US", component: <AboutScreen/>},
+    {id: "collaborators", title: "COLLABORATORS", component: <CollaboratorsScreen/>},
   ];
 
   return (

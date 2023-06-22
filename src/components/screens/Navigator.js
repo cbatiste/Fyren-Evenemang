@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {AnimatePresence, motion} from "framer-motion";
 
-function SectionHeader({ title, active, onSelect }) {
+function SectionHeader({title, active, onSelect}) {
   const [isActive, setActive] = useState(active);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ function SectionHeader({ title, active, onSelect }) {
   );
 }
 
-export default function Navigator({ screens }) {
+export default function Navigator({screens}) {
   let [activeScreen, setActiveScreen] = useState(-1);
   let [selectDisabled, setSelectDisabled] = useState(false);
 
@@ -49,8 +49,8 @@ export default function Navigator({ screens }) {
   };
 
   const contentAnimation = {
-    collapsed: { opacity: [1.0, 0.1, 0.0, 0.0], height: 0 },
-    open: { opacity: [0.0, 0.0, 0.1, 1.0], height: "auto" }
+    collapsed: {opacity: [1.0, 0.1, 0.0, 0.0], height: 0},
+    open: {opacity: [0.0, 0.0, 0.1, 1.0], height: "auto"}
   };
 
   const handleSelect = (selected, event) => {
@@ -77,7 +77,9 @@ export default function Navigator({ screens }) {
             key={i}
             variants={itemAnimation}
           >
-            <SectionHeader title={screen.title} onSelect={(e) => {handleSelect(i, e)}} active={i === activeScreen} />
+            <SectionHeader title={screen.title} onSelect={(e) => {
+              handleSelect(i, e)
+            }} active={i === activeScreen}/>
             <AnimatePresence>
               {i === activeScreen &&
                 <motion.div

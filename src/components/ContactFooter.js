@@ -2,7 +2,8 @@ import {FaInstagram, FaPhone, FaRegEnvelope, FaTiktok} from "react-icons/fa";
 
 export default function ContactFooter() {
   return (
-    <section className={"py-12 px-8 lg:px-24 xl:px-36 w-full flex-grow text-slate-50"} style={{backgroundColor: '#282f56'}}>
+    <section className={"py-12 px-8 lg:px-24 xl:px-36 w-full flex-grow text-slate-50"}
+             style={{backgroundColor: '#282f56'}}>
       <div className={"max-w-[1600px] flex flex-col m-auto"}>
         <h3 className={"flex text-4xl font-semibold"}>CONTACT US</h3>
         <div className={"flex grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 lg:px-12"}>

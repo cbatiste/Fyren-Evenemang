@@ -31,7 +31,7 @@ export default function Archive() {
               location={event.location}
               date={event.date}
               photos={
-                event.photoAlbum.map(photo => ({url: photo.url, aspectRatio: photo.dimensions.aspectRatio}))
+                event.photoAlbum ? event.photoAlbum.map(photo => ({url: photo.url, aspectRatio: photo.dimensions.aspectRatio})) : []
               }
             />
           </motion.div>

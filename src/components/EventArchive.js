@@ -31,18 +31,23 @@ export default function EventArchive(props) {
         />
 
         <div className={'text-center m-4'}>
-          <a className={'hidden md:inline text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}
-             onClick={() => setGalleryVisible(true)}>
-            <h6 className={'inline'}>Photo Album</h6>
-          </a>
+          {
+            (photos && photos.length) ?
+            <div>
+              <a className={'hidden md:inline text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}
+               onClick={() => setGalleryVisible(true)}>
+                <h6 className={'inline'}>Photo Album</h6>
+              </a>
 
-          <PhotoWallOverlay
-            title={title}
-            description={date}
-            photos={photos}
-            visible={galleryVisible}
-            onClose={() => setGalleryVisible(false)}
-          />
+              <PhotoWallOverlay
+                title={title}
+                description={date}
+                photos={photos}
+                visible={galleryVisible}
+                onClose={() => setGalleryVisible(false)}
+              />
+            </div> : ''
+          }
         </div>
       </div>
       <div className={'flex order-3 pt-2 px-4 md:py-0 flex-col justify-center flex-1 text-center'}>
@@ -51,7 +56,7 @@ export default function EventArchive(props) {
         <div className={'block md:hidden pt-4'}>
           <a className={'text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}
              onClick={() => setGalleryVisible(true)}>
-            <h6 className={'inline'}>Photo Album</h6>
+            {(photos && photos.length) ? <h6 className={'inline'}>Photo Album</h6> : ''}
           </a>
         </div>
       </div>

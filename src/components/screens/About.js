@@ -16,6 +16,7 @@ function Profile({name, position, description, image}) {
           className={'m-auto min-w-[200px] max-w-[60%] sm:max-w-[280px] lg:max-w-none'}
           src={image}
           alt={`Photo of ${name}`}
+          defaultHeight={250}
         />
       </div>
     </div>
@@ -71,11 +72,11 @@ export default function About() {
 
   return (
     <section className={'pb-8'}>
-      <p className={'text-3xl sm:text-[2.5rem] mt-4 mb-8 xl:mb-2'}>Our Team</p>
+      <p className={'text-3xl sm:text-[2.5rem] pt-4 pb-8 xl:pb-2'}>Our Team</p>
 
       <div className={'px-0 sm:px-8'}>
         {
-          (teamData && teamData.result.length) ? teamData.result.map((member, i) => (
+          (teamData && teamData.length) ? teamData.map((member, i) => (
             <Profile
               name={member.name}
               position={member.position}
@@ -83,7 +84,7 @@ export default function About() {
               image={member.photo.url}
               key={i}
             />
-          )) : <p className={'text-center text-xl pt-12 pb-8'}>Huh? Where did everyone go?</p>
+          )) : <p className={'text-center text-xl pt-12 pb-8'}>We lost the whole team</p>
         }
       </div>
     </section>

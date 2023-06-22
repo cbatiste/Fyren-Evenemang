@@ -1,5 +1,5 @@
-import { createContext } from 'react';
-import {useCMSQuery} from "../components/hooks/useCMSQuery";
+import {createContext} from 'react';
+import {useSanityQuery} from "components/utility/SanityClient";
 
 import PageLogo from 'components/PageLogo';
 import Navigator from 'components/screens/Navigator';
@@ -24,8 +24,8 @@ export default function Home() {
     'photo': photo.asset -> {url, altText, 'dimensions': metadata.dimensions}
   }`;
 
-  let eventData = useCMSQuery(eventsQuery);
-  let teamMembersData =  useCMSQuery(teamMembersQuery);
+  let eventData = useSanityQuery(eventsQuery);
+  let teamMembersData =  useSanityQuery(teamMembersQuery);
   let apiData = {events: eventData, teamMembers: teamMembersData};
 
   const navigationScreens = [

@@ -12,19 +12,19 @@ export default function EventArchive(props) {
   } = props;
 
   let [galleryVisible, setGalleryVisible] = useState(false);
-
+console.log(poster)
   return (
     <div className={'flex flex-col md:flex-row justify-center py-12'}>
       <div className={'flex order-2 pt-2 px-4 md:py-0 md:order-1 flex-col justify-center flex-1'}>
         <div className={'text-center md:text-left md:m-auto md:pb-4'}>
-          <h2 className={'text-5xl font-semibold'}>{title}</h2>
-          {location && <p className={'text-2xl pt-4 pb-2'}>{location}</p>}
+          <h2 className={'text-4xl sm:text-5xl font-semibold'}>{title}</h2>
+          {location && <p className={'text-xl sm:text-2xl pt-2 sm:pt-4 pb-2'}>{location}</p>}
         </div>
       </div>
       <div className={'order-1 md:order-2 self-center'}>
         <DynamicImage
           className={'md:w-[240px] lg:w-[300px] max-w-[300px]'}
-          src={poster}
+          src={poster.url}
           alt={`Poster for event ${title}`}
           defaultHeight={500}
           showLoadingIndicator

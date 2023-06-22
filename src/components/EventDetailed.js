@@ -41,9 +41,9 @@ export default function EventDetailed(props) {
       <div className={'order-1 md:order-2 self-center'}>
         <DynamicImage
           className={'md:w-[240px] lg:w-[300px] max-w-[300px]'}
-          src={poster}
-          alt={`Poster for event ${title}`}
+          src={poster.url}
           defaultHeight={500}
+          alt={`Poster for event ${title}`}
           showLoadingIndicator
         />
       </div>

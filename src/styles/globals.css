@@ -15,3 +15,9 @@ body {
     font-size: 12px;
   }
 }
+
+@media only screen and (min-width: 2000px) {
+  html, body {
+    font-size: 18px;
+  }
+}

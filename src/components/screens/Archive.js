@@ -10,7 +10,7 @@ const datePassed = (date1, date2) =>
 export default function Archive() {
   const eventData = useContext(DataContext).events;
 
-  let events = eventData ? eventData.result.filter(event =>
+  let events = eventData ? eventData.filter(event =>
     datePassed(event.date, Date.now())
   ) : null;
 
@@ -27,15 +27,13 @@ export default function Archive() {
           >
             <EventArchive
               title={event.name}
-              poster={event.poster.url}
+              poster={event.poster}
               location={event.location}
               date={event.date}
-              photos={
-                event.photoAlbum ? event.photoAlbum.map(photo => ({url: photo.url, aspectRatio: photo.dimensions.aspectRatio})) : []
-              }
+              photos={event.photoAlbum}
             />
           </motion.div>
-        )) : <p className={'text-center text-xl pt-12 pb-8'}>No events to show here...</p>
+        )) : <p className={'text-center text-lg sm:text-xl pt-12 pb-8'}>No events to show here...</p>
       }
     </section>
   );

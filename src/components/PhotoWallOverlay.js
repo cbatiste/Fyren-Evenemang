@@ -1,38 +1,31 @@
 import React, {useState, useEffect} from "react";
+import imageUrlBuilder from '@sanity/image-url'
 import {motion, AnimatePresence} from "framer-motion";
 import Gallery from "react-photo-gallery";
 import {FaTimes} from "react-icons/fa";
-import {AiOutlineLoading} from "react-icons/ai";
+import {SanityClient} from 'components/utility/SanityClient';
+
+const ImageBuilder = imageUrlBuilder(SanityClient);
+const image = url => ImageBuilder.image(url);
 
 function GalleryImage({index, photo, top, left, direction}) {
   let [loaded, setLoaded] = useState(false);
-  let cont = {};
-
-  if (direction === "column") {
-    cont.position = "absolute";
-    cont.left = left;
-    cont.top = top;
-  }
 
   return (
     <div
-      className={'scale-95 flex justify-center'}
-      style={{width: photo.width}}
+      className={`scale-95 flex justify-center ${!loaded && 'animate-pulse'} bg-[rgba(255,255,255,0.25)]`}
+      style={{width: photo.width, height: photo.height}}
       key={index}
     >
-      <div style={{height: 240}} className={`flex flex-col ${loaded ? 'hidden' : ''}`}>
-        <AiOutlineLoading className={`flex self-center my-auto animate-spin delay-100 text-4xl`} />
-      </div>
-
       <motion.img
         initial={{ opacity: 0 }}
         animate={{ opacity: loaded ? 1 : 0 }}
         transition={{delay: index/15, duration: 0.5}}
-        alt={photo.title}
         width={photo.width}
         height={photo.height}
+        src={image(photo.src).quality(75).url()}
+        alt={photo.title}
         className={loaded ? '' : 'hidden'}
-        {...photo}
         onLoad={() => setLoaded(true)}
       />
     </div>
@@ -80,9 +73,9 @@ export default function PhotoWallOverlay(props) {
           </div>
           <div className={'p-3 sm:p-6 pt-12'}>
             <Gallery
-              photos={props.photos.map(photo => (
-                {src: photo.url, width: photo.aspectRatio, height: 1}
-              ))}
+              photos={props.photos.map(photo => {
+                return {src: photo.url, width: photo.dimensions.width, height: photo.dimensions.height}
+              })}
               targetRowHeight={containerWidth => Math.max(Math.min(3 * (containerWidth / props.photos.length), 900), 500)}
               renderImage={imageRenderer}
             />

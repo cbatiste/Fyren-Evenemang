@@ -29,17 +29,17 @@ export default function LineupOverlay(props) {
             </div>
           </div>
           <div className={'p-6 pt-12'}>
-            {props.artistLineup.length &&
+            {(props.artistLineup && props.artistLineup.length) ?
               <div className={'pb-8 text-2xl'}>
                 <h3 className={'font-black'}>LINEUP</h3>
                 {props.artistLineup.map((artist, i) => <p key={i}>{artist}</p>)}
-              </div>
+              </div> : ''
             }
-            {props.DJLineup.length &&
+            {(props.DJLineup && props.DJLineup.length) ?
               <div className={'pb-8 text-2xl'}>
                 <h3 className={'font-black'}>DJ LINEUP</h3>
                 {props.DJLineup.map((artist, i) => <p key={i}>{artist}</p>)}
-              </div>
+              </div> : ''
             }
           </div>
         </motion.div>

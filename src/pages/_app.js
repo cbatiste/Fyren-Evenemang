@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>FYREN.SE</title>
+        <title>Fyren Evenemang</title>
       </Head>
       <style jsx global>{`
         html {

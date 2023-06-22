@@ -6,7 +6,7 @@ function SectionHeader({ title, active, onSelect }) {
 
   useEffect(() => {
     setActive(active);
-  }, [active])
+  }, [active]);
 
   return (
     <h3
@@ -29,6 +29,7 @@ function SectionHeader({ title, active, onSelect }) {
 
 export default function Navigator({ screens }) {
   let [activeScreen, setActiveScreen] = useState(-1);
+  let [selectDisabled, setSelectDisabled] = useState(false);
 
   const listAnimation = {
     visible: {
@@ -53,7 +54,11 @@ export default function Navigator({ screens }) {
   };
 
   const handleSelect = (selected, event) => {
+    if (selectDisabled) return;
+
     setActiveScreen(current => {
+      setSelectDisabled(true);
+
       if (selected !== current && current !== -1) {
         window.requestAnimationFrame(() => {
           window.scrollTo(0, 280 + selected * 60);
@@ -82,6 +87,7 @@ export default function Navigator({ screens }) {
                   exit={'collapsed'}
                   variants={contentAnimation}
                   transition={{duration: 0.5, ease: 'easeInOut'}}
+                  onAnimationComplete={() => setSelectDisabled(false)}
                 >
                   {screen.component}
                 </motion.div>

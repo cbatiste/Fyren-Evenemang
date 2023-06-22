@@ -1,4 +1,4 @@
-import DynamicImage from "../DynamicImage";
+import DynamicImage from "components/DynamicImage";
 
 export default function Collaborators() {
   return (

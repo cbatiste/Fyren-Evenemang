@@ -1,8 +1,9 @@
 import {useState} from "react";
 import LineupOverlay from "components/LineupOverlay";
-import DynamicImage from "./DynamicImage";
+import DynamicImage from "components/DynamicImage";
 
 export default function EventDetailed(props) {
+  console.log(props);
   const {
     title,
     poster,
@@ -48,17 +49,17 @@ export default function EventDetailed(props) {
       </div>
       <div className={'flex order-3 flex-col flex-1 text-center md:pt-8'}>
         <div className={'hidden md:block'}>
-          {artistLineup.length &&
+          {(artistLineup && artistLineup.length) ?
             <div className={'pb-8'}>
               <h3 className={'font-bold text-xl'}>LINEUP</h3>
               {artistLineup.map((artist, i) => <p key={i}>{artist}</p>)}
-            </div>
+            </div> : ''
           }
-          {DJLineup.length &&
+          {(DJLineup && DJLineup.length) ?
             <div className={'pb-8'}>
               <h3 className={'font-bold text-xl'}>DJ LINEUP</h3>
               {DJLineup.map((artist, i) => <p key={i}>{artist}</p>)}
-            </div>
+            </div> : ''
           }
         </div>
         <div>

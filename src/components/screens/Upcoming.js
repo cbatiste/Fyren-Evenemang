@@ -1,42 +1,40 @@
-import EventDetailed from 'components/EventDetailed';
+import {useContext} from "react";
 import {motion} from "framer-motion";
 
+import {DataContext} from "pages";
+import EventDetailed from 'components/EventDetailed';
+
+const datePassed = (date1, date2) =>
+  new Date(date1).setHours(0, 0, 0, 0) < new Date(date2).setHours(0, 0, 0, 0);
+
 export default function Upcoming() {
+  const eventData = useContext(DataContext).events;
+
+  let events = eventData ? eventData.result.filter(event =>
+    !datePassed(event.date, Date.now())
+  ) : null;
+
   return (
     <section className={'pb-8'}>
-      <motion.div initial={{ opacity: 0, translateY: 30 }} whileInView={{ opacity: 1, translateY: 0 }} viewport={{margin: '-120px', once: true}} transition={{ease:'easeInOut',duration:0.5}}>
-        <EventDetailed title={'Square 1'} poster={'/posters/SQUARE 1PRETTY.JPG'} details={[
-          {key: 'Time', value: '21.00 – 02.00'},
-          {key: 'Date', value: 'May 10th, 2023'},
-          {key: 'Location', value: 'Boqueria'},
-          {key: 'Address', value: 'MOOD, Jakobsbergsgalan 17'},
-          {key: 'Tickets', value: 'Sign up for list'}
-        ]} artistLineup={[
-          'Akos',
-          'Celina & Ellen',
-          'Dexter & Drozin'
-        ]} DJLineup={[
-          'Erik B2B Christian',
-          'Kasizzle'
-        ]} />
-      </motion.div>
-
-      <motion.div initial={{ opacity: 0, translateY: 30 }} whileInView={{ opacity: 1, translateY: 0 }} viewport={{margin: '-120px', once: true}} transition={{ease:'easeInOut',duration:0.5}}>
-        <EventDetailed title={'Fyren by the Sea'} poster={'/posters/final2.jpeg'} details={[
-          {key: 'Time', value: '21.00 – 02.00'},
-          {key: 'Date', value: 'May 10th, 2023'},
-          {key: 'Location', value: 'Boqueria'},
-          {key: 'Address', value: 'MOOD, Jakobsbergsgalan 17'},
-          {key: 'Tickets', value: 'Sign up for list'}
-        ]} artistLineup={[
-          'Akos',
-          'Celina & Ellen',
-          'Dexter & Drozin'
-        ]} DJLineup={[
-          'Erik B2B Christian',
-          'Kasizzle'
-        ]} />
-      </motion.div>
+      {
+        (events && events.length) ? events.map((event, i) => (
+          <motion.div
+            initial={{opacity: 0, translateY: 30}}
+            whileInView={{opacity: 1, translateY: 0}}
+            viewport={{margin: '-120px', once: true}}
+            transition={{ease:'easeInOut',duration:0.5}}
+            key={i}
+          >
+            <EventDetailed title={event.name} poster={event.poster.url} details={[
+              {key: 'Date', value: event.date},
+              {key: 'Time', value: `${event.timeStart} - ${event.timeEnd}`},
+              {key: 'Location', value: event.location},
+              {key: 'Address', value: event.address},
+              {key: 'Tickets', value: event.tickets}
+            ]} artistLineup={event.lineupArtists} DJLineup={event.lineupDJs} />
+          </motion.div>
+        )) : <p className={'text-center text-xl pt-12 pb-8'}>Come back soon, next event TBA</p>
+      }
     </section>
   )
 }

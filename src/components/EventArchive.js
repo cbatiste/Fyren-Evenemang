@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import PhotoWallOverlay from 'components/PhotoWallOverlay'
 import DynamicImage from "components/DynamicImage";
+import {BiImages} from "react-icons/bi";
 
 export default function EventArchive(props) {
   const {
@@ -34,9 +35,9 @@ export default function EventArchive(props) {
           {
             (photos && photos.length) ?
               <div>
-                <a className={'hidden md:inline text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}
+                <a className={'hidden md:inline text-2xl font-medium text-sky-500 cursor-pointer hover:text-sky-700'}
                    onClick={() => setGalleryVisible(true)}>
-                  <h6 className={'inline'}>Photo Album</h6>
+                  <h6 className={'inline'}><BiImages className={'inline mb-1 mr-2'}/> Photo Album</h6>
                 </a>
 
                 <PhotoWallOverlay
@@ -50,7 +51,7 @@ export default function EventArchive(props) {
           }
         </div>
       </div>
-      <div className={'flex order-3 pt-2 px-4 md:py-0 flex-col justify-center flex-1 text-center'}>
+      <div className={'flex order-3 pt-2 pl-4 md:py-0 flex-col justify-center flex-1 text-center'}>
         <h3 className={'text-2xl md:text-3xl md:pb-6'}>{date}</h3>
 
         <div className={'block md:hidden pt-4'}>

@@ -13,8 +13,8 @@ function GalleryImage({index, photo, top, left, direction}) {
 
   return (
     <div
-      className={`scale-95 flex justify-center ${!loaded && 'animate-pulse'} bg-[rgba(255,255,255,0.25)]`}
-      style={{width: photo.width, height: photo.height}}
+      className={`flex justify-center ${!loaded && 'animate-pulse'} m-[10px] bg-[rgba(255,255,255,0.25)]`}
+      style={{width: photo.width - 16, height: photo.height - 16}}
       key={index}
     >
       <motion.img
@@ -25,7 +25,7 @@ function GalleryImage({index, photo, top, left, direction}) {
         height={photo.height}
         src={image(photo.src).quality(75).url()}
         alt={photo.title}
-        className={loaded ? '' : 'hidden'}
+        className={!loaded && 'hidden'}
         onLoad={() => setLoaded(true)}
       />
     </div>
@@ -53,7 +53,7 @@ export default function PhotoWallOverlay(props) {
     <AnimatePresence>
       {(props.visible &&
         <motion.div
-          className={'fixed inset-0 bg-neutral-900 text-white md:px-12 py-16 z-10 overflow-auto'}
+          className={'fixed inset-0 bg-neutral-900 text-white md:px-12 py-16 z-50 overflow-auto'}
           initial={{opacity: 0}}
           animate={{opacity: 1}}
           exit={{opacity: 0}}

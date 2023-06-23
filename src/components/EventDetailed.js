@@ -3,10 +3,10 @@ import LineupOverlay from "components/LineupOverlay";
 import DynamicImage from "components/DynamicImage";
 
 export default function EventDetailed(props) {
-  console.log(props);
   const {
     title,
     poster,
+    date,
     details = [],
     artistLineup = [],
     DJLineup = []
@@ -17,7 +17,8 @@ export default function EventDetailed(props) {
   return (
     <div className={'flex flex-col md:flex-row justify-center py-12'}>
       <div className={'flex order-2 mt-6 md:m-0 md:mr-6 md:order-1 flex-col justify-center flex-1 text-center'}>
-        <h2 className={'text-4xl font-semibold'}>{title}</h2>
+        <h2 className={'text-4xl font-semibold mb-3'}>{title}</h2>
+        <h3 className={'text-2xl'}>{date}</h3>
 
         <div className={'mt-3 md:m-0'}>
           <a className={'inline md:hidden text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}
@@ -34,9 +35,10 @@ export default function EventDetailed(props) {
         </div>
 
         <div className={'pt-5'}>
-          {details.map((detail, i) => (
-            <p key={i} className={'mb-2'}>{detail.key}: {detail.value}</p>
-          ))}
+          {details.map((detail, i) => {
+            if (!detail) return;
+            return <p key={i} className={'mb-1'}>{detail.key}: {detail.value}</p>;
+          })}
         </div>
       </div>
       <div className={'order-1 md:order-2 self-center'}>
@@ -48,7 +50,7 @@ export default function EventDetailed(props) {
           showLoadingIndicator
         />
       </div>
-      <div className={'flex order-3 flex-col flex-1 text-center md:pt-8'}>
+      <div className={'flex order-3 flex-col justify-center md:mb-4 flex-1 text-center'}>
         <div className={'hidden md:block'}>
           {(artistLineup && artistLineup.length) ?
             <div className={'pb-8'}>

@@ -20,8 +20,8 @@ function SectionHeader({title, active, onSelect}) {
       <p>{title}</p>
       <motion.div
         animate={{scaleX: isActive ? 1 : 0}}
-        className={'border-zinc-900'}
-        style={{borderBottomWidth: 4, transformOrigin: 'top left'}}>
+        className={'border-zinc-900 border-b-[3px] sm:border-b-[4px]'}
+        style={{transformOrigin: 'top left'}}>
       </motion.div>
     </h3>
   );

@@ -21,3 +21,21 @@ body {
     font-size: 18px;
   }
 }
+
+.layered-waves {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -190px;
+  height: 200px;
+  background-image: url('/effects/layered-waves5.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  z-index: -20;
+}
+
+@media only screen and (min-width: 2800px) {
+  .layered-waves {
+    background-size: cover;
+  }
+}

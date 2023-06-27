@@ -2,12 +2,9 @@ import {FaInstagram, FaPhone, FaRegEnvelope, FaTiktok} from "react-icons/fa";
 
 export default function ContactFooter() {
   return (
-    <section className={"py-20 px-8 lg:px-24 xl:px-36 w-full flex-grow text-slate-50 relative"}
+    <section className={"py-20 mt-[15%] px-8 lg:px-24 xl:px-36 w-full flex-grow text-slate-50 relative"}
              style={{backgroundColor: '#282f56'}}>
-      {/*<div className={'absolute inset-0 bottom-[20%] mt-[-2%] -skew-y-1 z-10 overflow-hidden'}*/}
-      {/*     style={{backgroundColor: '#282f56'}}>*/}
-      {/*  /!*<div className={'absolute left-0 top-[-60px] right-0 h-[80px] skew-y-3'} style={{backgroundColor: '#324d7e'}}></div>*!/*/}
-      {/*</div>*/}
+      <div className={'layered-waves'}></div>
 
       <div className={"relative max-w-[1600px] flex flex-col m-auto z-20"}>
         <h3 className={"flex text-4xl font-semibold"}>CONTACT US</h3>
@@ -48,7 +45,7 @@ export default function ContactFooter() {
             <a title={"TikTok"}><FaTiktok className={"inline mr-4 ml-1 text-2xl"}/><span>@fyren</span></a>
           </div>
         </div>
-        <p className={"text-center mt-8 text-slate-500"}>© Kasizzle AB 2023</p>
+        <p className={"text-center mt-28 mb-4 text-slate-500"}>© Kasizzle AB 2023</p>
       </div>
     </section>
   );

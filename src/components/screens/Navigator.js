@@ -81,7 +81,8 @@ export default function Navigator({screens}) {
               handleSelect(i, e)
             }} active={i === activeScreen}/>
             <AnimatePresence>
-              {i === activeScreen &&
+              {
+                i === activeScreen &&
                 <motion.div
                   key={'content'}
                   initial={'collapsed'}

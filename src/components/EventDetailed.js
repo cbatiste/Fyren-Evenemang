@@ -52,13 +52,13 @@ export default function EventDetailed(props) {
       </div>
       <div className={'flex order-3 flex-col justify-center md:mb-4 flex-1 text-center'}>
         <div className={'hidden md:block'}>
-          {(artistLineup && artistLineup.length) ?
+          {(artistLineup?.length) ?
             <div className={'pb-8'}>
               <h3 className={'font-bold text-xl'}>LINEUP</h3>
               {artistLineup.map((artist, i) => <p key={i}>{artist}</p>)}
             </div> : ''
           }
-          {(DJLineup && DJLineup.length) ?
+          {(DJLineup?.length) ?
             <div className={'pb-8'}>
               <h3 className={'font-bold text-xl'}>DJ LINEUP</h3>
               {DJLineup.map((artist, i) => <p key={i}>{artist}</p>)}

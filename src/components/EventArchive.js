@@ -33,7 +33,7 @@ export default function EventArchive(props) {
 
         <div className={'text-center m-4'}>
           {
-            (photos && photos.length) ?
+            (photos?.length) ?
               <div>
                 <a className={'hidden md:inline text-2xl font-medium text-sky-500 cursor-pointer hover:text-sky-700'}
                    onClick={() => setGalleryVisible(true)}>
@@ -57,7 +57,7 @@ export default function EventArchive(props) {
         <div className={'block md:hidden pt-4'}>
           <a className={'text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}
              onClick={() => setGalleryVisible(true)}>
-            {(photos && photos.length) ?
+            {(photos?.length) ?
               <h6 className={'inline'}><BiImages className={'inline mb-1 mr-2'}/> Photo Album</h6> : ''}
           </a>
         </div>

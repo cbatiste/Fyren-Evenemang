@@ -76,7 +76,7 @@ export default function About() {
 
       <div className={'px-0 sm:px-8'}>
         {
-          (teamData && teamData.length) ? teamData.map((member, i) => (
+          teamData?.length ? teamData.map((member, i) => (
             <Profile
               name={member.name}
               position={member.position}

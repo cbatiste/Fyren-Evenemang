@@ -10,14 +10,14 @@ const datePassed = (date1, date2) =>
 export default function Archive() {
   const eventData = useContext(DataContext).events;
 
-  let events = eventData ? eventData.filter(event =>
+  let events = eventData?.filter(event =>
     datePassed(event.date, Date.now())
-  ) : null;
+  );
 
   return (
     <section className={'pb-8'}>
       {
-        (events && events.length) ? events.map((event, i) => (
+        events?.length ? events.map((event, i) => (
           <motion.div
             initial={{opacity: 0, translateY: 30}}
             whileInView={{opacity: 1, translateY: 0}}

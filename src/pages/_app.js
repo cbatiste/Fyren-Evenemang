@@ -1,9 +1,15 @@
 import 'styles/globals.css'
 import Head from "next/head";
-import {Urbanist, Work_Sans} from 'next/font/google'
+import {Inconsolata, Work_Sans} from 'next/font/google'
+import localFont from 'next/font/local'
+
+const Quarto = localFont({
+  src: './QuartoRegular.ttf',
+  display: 'swap',
+})
 
 const work_sans = Work_Sans({subsets: ['latin']});
-const urbanist = Urbanist({subsets: ['latin']});
+const inconsolata = Inconsolata({subsets: ['latin']});
 
 export default function App({Component, pageProps}) {
   return (
@@ -13,11 +19,12 @@ export default function App({Component, pageProps}) {
       </Head>
       <style jsx global>{`
         html {
-          font-family: ${work_sans.style.fontFamily};
+          font-family: ${inconsolata.style.fontFamily};
         }
 
         h1, h2, h3, h4, h5, h6 {
-          font-family: ${urbanist.style.fontFamily};
+          font-family: ${Quarto.style.fontFamily};
+          letter-spacing: 0.5px;
         }
       `}</style>
         <Component {...pageProps} />

@@ -37,7 +37,7 @@ export default function EventArchive(props) {
               <div>
                 <a className={'hidden md:inline text-2xl font-medium text-sky-500 cursor-pointer hover:text-sky-700'}
                    onClick={() => setGalleryVisible(true)}>
-                  <h6 className={'inline'}><BiImages className={'inline mb-1 mr-2'}/> Photo Album</h6>
+                  <p className={'inline'}><BiImages className={'inline mb-1 mr-2'}/> Photo Album</p>
                 </a>
 
                 <PhotoWallOverlay
@@ -52,13 +52,13 @@ export default function EventArchive(props) {
         </div>
       </div>
       <div className={'flex order-3 pt-2 md:pl-4 md:py-0 flex-col justify-center flex-1 text-center'}>
-        <h3 className={'text-2xl md:text-3xl md:pb-6'}>{date}</h3>
+        <p className={'text-2xl md:text-3xl md:pb-6'}>{date}</p>
 
         <div className={'block md:hidden pt-4'}>
           <a className={'text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}
              onClick={() => setGalleryVisible(true)}>
             {(photos?.length) ?
-              <h6 className={'inline'}><BiImages className={'inline mb-1 mr-2'}/> Photo Album</h6> : ''}
+              <p className={'inline'}><BiImages className={'inline mb-1 mr-2'}/> Photo Album</p> : ''}
           </a>
         </div>
       </div>

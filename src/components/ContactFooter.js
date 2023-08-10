@@ -2,24 +2,24 @@ import {FaInstagram, FaPhone, FaRegEnvelope, FaTiktok} from "react-icons/fa";
 
 export default function ContactFooter() {
   return (
-    <section className={"py-20 mt-[15%] px-8 lg:px-24 xl:px-36 w-full flex-grow text-slate-50 relative"}
+    <section className={"py-20 mt-24 px-8 lg:px-24 xl:px-36 w-full flex-grow text-slate-50 relative"}
              style={{backgroundColor: '#282f56'}}>
       <div className={'layered-waves'}></div>
 
       <div className={"relative max-w-[1600px] flex flex-col m-auto z-20"}>
-        <h3 className={"flex text-4xl font-semibold"}>CONTACT US</h3>
+        <h3 className={"flex text-4xl font-semibold"}>GET IN TOUCH</h3>
         <div className={"flex grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 lg:px-12"}>
           <div>
             <p className={"text-2xl md:pl-12 lg:p-0 sm:text-3xl"}>Contact</p>
           </div>
           <div className={"text-lg sm:text-xl"}>
             <div>
-              <a className={"inline-block"} href={"mailto:info@fyren.se"}>
+              <a className={"inline-block mb-2"} href={"mailto:info@fyren.se"}>
                 <FaRegEnvelope className={"inline mr-4"}/><span>info@fyren.se</span></a>
               <label className={"block text-sm text-slate-400 pl-9"}>(General information and questions)</label>
             </div>
             <div className={"pt-6"}>
-              <a className={"inline-block"} href={"mailto:erik@kasizzle.se"}>
+              <a className={"inline-block mb-2"} href={"mailto:erik@kasizzle.se"}>
                 <FaRegEnvelope className={"inline mr-4"}/><span>erik@kasizzle.se</span></a>
               <label className={"block text-sm text-slate-400 pl-9"}>(Erik Larsson, CEO)</label>
             </div>
@@ -34,8 +34,8 @@ export default function ContactFooter() {
               <label className={"text-sm text-slate-400 pl-9"}>(Oscar Fredell, CTO)</label>
             </div>
           </div>
-          <div>
-            <p className={"text-2xl md:pl-12 lg:p-0 sm:text-3xl pt-5"}>Social</p>
+          <div className={'sm:pt-5'}>
+            <p className={"text-2xl md:pl-12 lg:p-0 sm:text-3xl"}>Social</p>
           </div>
           <div className={"text-lg sm:text-xl pt-2 sm:pt-5"}>
             <a title={"Instagram"} href={"https://instagram.com/fyren.se"} target={"_blank"}><FaInstagram

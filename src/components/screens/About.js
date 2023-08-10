@@ -72,8 +72,6 @@ export default function About() {
 
   return (
     <section className={'pb-8'}>
-      <p className={'text-3xl sm:text-[2.5rem] pt-4 pb-8 xl:pb-2'}>Our Team</p>
-
       <div className={'px-0 sm:px-8'}>
         {
           teamData?.length ? teamData.map((member, i) => (

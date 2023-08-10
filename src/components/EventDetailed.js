@@ -18,7 +18,7 @@ export default function EventDetailed(props) {
     <div className={'flex flex-col md:flex-row justify-center py-12'}>
       <div className={'flex order-2 mt-6 md:m-0 md:mr-6 md:order-1 flex-col justify-center flex-1 text-center'}>
         <h2 className={'text-4xl font-semibold mb-3'}>{title}</h2>
-        <h3 className={'text-2xl'}>{date}</h3>
+        <p className={'text-2xl'}>{date}</p>
 
         <div className={'mt-3 md:m-0'}>
           <a className={'inline md:hidden text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}
@@ -66,7 +66,7 @@ export default function EventDetailed(props) {
           }
         </div>
         <div>
-          <button className={'border-slate-900 mt-4 md:m-0 border-2 rounded px-4 py-2 text-xl'}><h6>BUY TICKETS</h6>
+          <button className={'border-slate-900 mt-4 md:m-0 border-2 rounded px-4 py-2 text-xl'}><p>BUY TICKETS</p>
           </button>
         </div>
       </div>

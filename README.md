@@ -39,3 +39,11 @@ npx sanity deploy
 - Website hosting: Github Pages
 - CMS: Sanity, with Sanity Studio editor and Content Lake API
 
+### Todo:
+
+- Photographed by at top of photo album
+- Ticketing/booking update DONE
+- Socials for about
+- Artwork credit
+- Update collabs, local files
+- Update contacts, add sales rep Karl Bellander, 0735446693 DONE

@@ -23,6 +23,11 @@ export default function ContactFooter() {
                 <FaRegEnvelope className={"inline mr-4"}/><span>erik@kasizzle.se</span></a>
               <label className={"block text-sm text-slate-400 pl-9"}>(Erik Larsson, CEO)</label>
             </div>
+            <div className={"pt-6"}>
+              <a className={"inline-block mb-2"} href={"mailto:charles.batiste0@gmail.com"}>
+                <FaRegEnvelope className={"inline mr-4"}/><span>charles.batiste0@gmail.com</span></a>
+              <label className={"block text-sm text-slate-400 pl-9"}>(Charles Batiste, CTO)</label>
+            </div>
           </div>
           <div className={"text-lg sm:text-xl"}>
             <div>
@@ -31,7 +36,11 @@ export default function ContactFooter() {
             </div>
             <div className={"pt-6"}>
               <p><FaPhone className={"inline mr-4"}/><span>+46 73 066 62 84</span></p>
-              <label className={"text-sm text-slate-400 pl-9"}>(Oscar Fredell, CTO)</label>
+              <label className={"text-sm text-slate-400 pl-9"}>(Oscar Fredell, CFO)</label>
+            </div>
+            <div className={"pt-6"}>
+              <p><FaPhone className={"inline mr-4"}/><span>+46 73 544 66 93</span></p>
+              <label className={"text-sm text-slate-400 pl-9"}>(Karl Bellander, Sales Representative)</label>
             </div>
           </div>
           <div className={'sm:pt-5'}>

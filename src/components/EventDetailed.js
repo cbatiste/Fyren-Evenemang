@@ -7,12 +7,23 @@ export default function EventDetailed(props) {
     title,
     poster,
     date,
-    details = [],
+    description,
+    venue = [],
+    booking,
     artistLineup = [],
     DJLineup = []
   } = props;
 
   let [lineupVisible, setLineupVisible] = useState(false);
+
+  const handleBooking = () => {
+    if (booking.url) {
+      window.location.href = booking.url;
+    } else {
+      console.log(booking.email);
+      window.location.href = `mailto:${booking.email.address}?subject=${booking.email.subject}&body=${booking.email.body.replace(/\n/g, '%0d%0a')}`;
+    }
+  }
 
   return (
     <div className={'flex flex-col md:flex-row justify-center py-12'}>
@@ -35,7 +46,7 @@ export default function EventDetailed(props) {
         </div>
 
         <div className={'pt-5'}>
-          {details.map((detail, i) => {
+          {venue.map((detail, i) => {
             if (!detail) return;
             return <p key={i} className={'mb-1'}>{detail.key}: {detail.value}</p>;
           })}
@@ -43,7 +54,7 @@ export default function EventDetailed(props) {
       </div>
       <div className={'order-1 md:order-2 self-center'}>
         <DynamicImage
-          className={'md:w-[240px] lg:w-[300px] max-w-[300px]'}
+          className={'md:w-[280px] lg:w-[360px] max-w-[400px]'}
           src={poster.url}
           defaultHeight={500}
           alt={`Poster for event ${title}`}
@@ -65,8 +76,13 @@ export default function EventDetailed(props) {
             </div> : ''
           }
         </div>
-        <div>
-          <button className={'border-slate-900 mt-4 md:m-0 border-2 rounded px-4 py-2 text-xl'}><p>BUY TICKETS</p>
+        <div className={'md:ml-12'}>
+          {description && <p className={'mb-6'} style={{whiteSpace: 'pre-wrap'}}>{description}</p>}
+          {booking.description && <p className={'mb-6'} style={{whiteSpace: 'pre-wrap'}}>{booking.description}</p>}
+          <button className={'border-slate-900 mt-4 md:m-0 border-2 rounded px-4 py-2 text-xl'} onClick={() => {
+            handleBooking()
+          }}>
+            <p>{booking.buttonLabel && booking.buttonLabel.toUpperCase()}</p>
           </button>
         </div>
       </div>

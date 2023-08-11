@@ -8,8 +8,10 @@ export default function EventArchive(props) {
     title,
     location,
     poster,
+    posterCaption,
     date,
-    photos = []
+    photos = [],
+    photosCredit
   } = props;
 
   let [galleryVisible, setGalleryVisible] = useState(false);
@@ -18,7 +20,7 @@ export default function EventArchive(props) {
     <div className={'flex flex-col md:flex-row justify-center py-12'}>
       <div className={'flex order-2 pt-2 px-4 md:py-0 md:order-1 flex-col justify-center flex-1'}>
         <div className={'text-center md:text-left md:m-auto md:pb-4'}>
-          <h2 className={'text-4xl sm:text-5xl font-semibold'}>{title}</h2>
+          <h2 className={'text-3xl sm:text-4xl font-semibold'}>{title}</h2>
           {location && <p className={'text-xl sm:text-2xl pt-2 sm:pt-4 pb-2'}>{location}</p>}
         </div>
       </div>
@@ -30,6 +32,8 @@ export default function EventArchive(props) {
           defaultHeight={500}
           showLoadingIndicator
         />
+
+        {posterCaption && <p className={'text-center pt-3'}>{posterCaption}</p>}
 
         <div className={'text-center m-4'}>
           {
@@ -43,6 +47,7 @@ export default function EventArchive(props) {
                 <PhotoWallOverlay
                   title={title}
                   description={date}
+                  credit={photosCredit}
                   photos={photos}
                   visible={galleryVisible}
                   onClose={() => setGalleryVisible(false)}

@@ -43,6 +43,7 @@ export default function Upcoming() {
               <EventDetailed
                 title={event.name}
                 poster={event.poster}
+                posterCaption={event.poster_caption}
                 date={event.date}
                 venue={venue}
                 description={event.description}

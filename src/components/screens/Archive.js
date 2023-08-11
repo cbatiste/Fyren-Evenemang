@@ -28,9 +28,11 @@ export default function Archive() {
             <EventArchive
               title={event.name}
               poster={event.poster}
+              posterCaption={event.poster_caption}
               location={event.location}
               date={event.date}
               photos={event.photoAlbum}
+              photosCredit={event.photosCredit}
             />
           </motion.div>
         )) : <p className={'text-center text-lg sm:text-xl pt-12 pb-8'}>No events to show here...</p>

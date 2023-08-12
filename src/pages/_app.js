@@ -23,7 +23,7 @@ export default function App({Component, pageProps}) {
 
         h1, h2, h3, h4, h5, h6 {
           font-family: ${QuartoFont.style.fontFamily};
-          letter-spacing: 1px;
+          letter-spacing: 0.6px;
         }
       `}</style>
         <Component {...pageProps} />

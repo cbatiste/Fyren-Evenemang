@@ -7,7 +7,7 @@ export default function ContactFooter() {
       <div className={'layered-waves'}></div>
 
       <div className={"relative max-w-[1600px] flex flex-col m-auto z-20"}>
-        <h3 className={"flex text-4xl font-semibold"}>GET IN TOUCH</h3>
+        <h3 className={"flex text-4xl"}>GET IN TOUCH</h3>
         <div className={"flex grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 lg:px-12"}>
           <div>
             <p className={"text-2xl md:pl-12 lg:p-0 sm:text-3xl"}>Contact</p>

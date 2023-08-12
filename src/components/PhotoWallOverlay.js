@@ -60,7 +60,7 @@ export default function PhotoWallOverlay(props) {
         >
           <div className={'flex flex-row w-full justify-between px-6 sm:px-8'}>
             <div className={'text-left'}>
-              <h3 className={'text-4xl md:text-5xl font-bold'}>{props.title}</h3>
+              <h3 className={'text-4xl md:text-5xl'}>{props.title}</h3>
               {(props.description && <p className={'text-2xl md:text-3xl font-light pt-2'}>{props.description}</p>)}
               {(props.credit && <p className={'text-lg md:text-xl font-light pt-4'}>Photography: {props.credit}</p>)}
             </div>

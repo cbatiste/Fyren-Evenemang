@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: Quarto;
-  src: url(/QuartoRegular.ttf);
-}
-
 html {
   scroll-behavior: smooth;
 }

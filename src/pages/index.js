@@ -20,7 +20,7 @@ export default function Home() {
   }`;
 
   let teamMembersQuery = `*[_type == "teamMember"]{
-    name, position, description,
+    name, position, description, email, linkedin, instagram, facebook, website, spotify, appleMusic,
     'photo': photo.asset -> {url, altText, 'dimensions': metadata.dimensions}
   }`;
 

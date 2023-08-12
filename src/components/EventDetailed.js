@@ -29,7 +29,7 @@ export default function EventDetailed(props) {
   return (
     <div className={'flex flex-col md:flex-row justify-center py-12'}>
       <div className={'flex order-2 mt-6 md:m-0 md:mr-6 md:order-1 flex-col justify-center flex-1 text-center'}>
-        <h2 className={'text-3xl sm:text-4xl font-semibold mb-3'}>{title}</h2>
+        <h2 className={'text-3xl sm:text-4xl mb-3'}>{title}</h2>
         <p className={'text-2xl'}>{date}</p>
 
         <div className={'mt-3 md:m-0'}>

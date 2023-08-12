@@ -33,7 +33,7 @@ export default function EventArchive(props) {
           showLoadingIndicator
         />
 
-        {posterCaption && <p className={'text-center pt-3'}>{posterCaption}</p>}
+        {posterCaption && <p className={'text-center pt-3'}><i>{posterCaption}</i></p>}
 
         <div className={'text-center m-4'}>
           {

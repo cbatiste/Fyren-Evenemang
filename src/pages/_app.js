@@ -4,8 +4,8 @@ import localFont from 'next/font/local';
 import {Inconsolata} from 'next/font/google';
 
 const QuartoFont = localFont({
-  src: './QuartoRegular.ttf',
-  display: 'swap',
+  src: '../assets/QuartoRegular.ttf',
+  display: 'swap'
 })
 
 const InconsolataFont = Inconsolata({subsets: ['latin']});

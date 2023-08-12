@@ -61,7 +61,7 @@ export default function EventDetailed(props) {
           alt={`Poster for event ${title}`}
           showLoadingIndicator
         />
-        {posterCaption && <p className={'text-center pt-3'}>{posterCaption}</p>}
+        {posterCaption && <p className={'text-center pt-3'}><i>{posterCaption}</i></p>}
       </div>
       <div className={'flex order-3 flex-col justify-center md:mb-4 flex-1 text-center'}>
         <div className={'hidden md:block'}>
@@ -81,9 +81,11 @@ export default function EventDetailed(props) {
         <div className={'md:ml-12'}>
           {description && <p className={'mb-6'} style={{whiteSpace: 'pre-wrap'}}>{description}</p>}
           {booking.description && <p className={'mb-6'} style={{whiteSpace: 'pre-wrap'}}>{booking.description}</p>}
-          <button className={'border-slate-900 mt-4 md:m-0 border-2 rounded px-4 py-2 text-xl'} onClick={() => {
-            handleBooking()
-          }}>
+          <button
+            className={'border-[#2a64f6] text-[#2a64f6] mt-4 md:m-0 border-2 rounded px-4 py-2 text-xl hover:bg-[#ecf1f6]'}
+            onClick={() => {
+              handleBooking()
+            }}>
             <p>{booking.buttonLabel && booking.buttonLabel.toUpperCase()}</p>
           </button>
         </div>

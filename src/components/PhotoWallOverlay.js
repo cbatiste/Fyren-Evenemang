@@ -23,7 +23,7 @@ function GalleryImage({index, photo, top, left, direction}) {
         transition={{delay: index / 15, duration: 0.5}}
         width={photo.width}
         height={photo.height}
-        src={image(photo.src).quality(75).url()}
+        src={image(photo.src).quality(30).url()}
         alt={photo.title}
         className={!loaded ? 'hidden' : undefined}
         onLoad={() => setLoaded(true)}

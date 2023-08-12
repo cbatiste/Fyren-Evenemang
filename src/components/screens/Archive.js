@@ -12,6 +12,8 @@ export default function Archive() {
 
   let events = eventData?.filter(event =>
     datePassed(event.date, Date.now())
+  ).sort((a, b) =>
+    new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
   return (

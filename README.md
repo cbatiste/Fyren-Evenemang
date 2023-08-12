@@ -41,9 +41,4 @@ npx sanity deploy
 
 ### Todo:
 
-- Photographed by at top of photo album DONE
-- Ticketing/booking update DONE
-- Socials for about DONE
-- Artwork credit DONE
-- Update collabs, local files
-- Update contacts, add sales rep Karl Bellander, 0735446693 DONE
+- Nothing left!

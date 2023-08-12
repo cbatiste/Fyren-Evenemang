@@ -25,7 +25,7 @@ function Profile({name, position, description, image, social}) {
   };
 
   return (
-    <div className={'flex flex-col md:flex-row mb-12 md:mb-6'}>
+    <div className={'flex flex-col md:flex-row mb-12 mt-6 md:mb-6'}>
       <div className={'order-2 md:order-1 md:basis-3/4 self-center md:pr-6 md:py-6'}>
         <h5 className={'text-2xl sm:text-3xl font-semibold'}>{name}</h5>
         <p className={'text-lg sm:text-xl mt-1 italic'}>{position}</p>

@@ -55,7 +55,7 @@ export default function ContactFooter() {
             <a title={"TikTok"}><FaTiktok className={"inline mr-4 ml-1 text-2xl"}/><span>@fyren</span></a>
           </div>
         </div>
-        <p className={"text-center mt-28 mb-4 text-slate-500"}>© Kasizzle AB 2023</p>
+        <p className={"text-center mt-28 mb-4 text-slate-500"}>© Kasizzle AB {new Date().getFullYear()}</p>
       </div>
     </section>
   );

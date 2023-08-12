@@ -40,7 +40,7 @@ export default function Home() {
       <main className={`flex min-h-screen flex-col text-zinc-900`}>
         <section className={'flex flex-col pb-64 w-full'}>
           <PageLogo/>
-          <div className={'flex flex-col pt-24 px-8 sm:px-[10%] lg:px-[12%]'}>
+          <div className={'flex flex-col pt-24 px-7 sm:px-[10%] lg:px-[12%]'}>
             <Navigator screens={navigationScreens}/>
           </div>
         </section>

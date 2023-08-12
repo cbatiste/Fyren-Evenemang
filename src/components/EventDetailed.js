@@ -35,7 +35,7 @@ export default function EventDetailed(props) {
         <div className={'mt-3 md:m-0'}>
           <a className={'inline md:hidden text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}
              onClick={() => setLineupVisible(true)}>
-            <h6 className={'inline'}>View Lineup</h6>
+            {(DJLineup?.length || artistLineup?.length) && <h6 className={'inline'}>View Lineup</h6>}
           </a>
           <LineupOverlay
             title={title}
@@ -46,7 +46,7 @@ export default function EventDetailed(props) {
           />
         </div>
 
-        <div className={'pt-5'}>
+        <div className={'pt-5 mb-4'}>
           {venue.map((detail, i) => {
             if (!detail) return;
             return <p key={i} className={'mb-1'}>{detail.key}: {detail.value}</p>;

@@ -30,14 +30,14 @@ function Profile({name, position, description, image, social}) {
         <h5 className={'text-2xl sm:text-3xl font-semibold'}>{name}</h5>
         <p className={'text-lg sm:text-xl mt-1 italic'}>{position}</p>
         <p className={'mt-4'}>{description}</p>
-        <div className={'flex flex-row mt-4'}>
+        <div className={'flex flex-row flex-wrap mt-4'}>
           {Object.keys(social).map(key => {
             if (!social[key]) return;
             let url = key === 'email' ? `mailto:${social[key]}` : social[key];
 
             return (
-              <a className={'cursor-pointer flex flex-row text-zinc-700 mr-4'} href={url} target='_blank' key={key}>
-                <div className={'text-lg p-[3px] mr-1'}>{socialIcons[key]}</div>
+              <a className={'flex flex-row text-zinc-700 mr-4 mb-2'} href={url} target='_blank' key={key}>
+                <div className={'inline text-lg p-[3px] mr-1'}>{socialIcons[key]}</div>
                 <span className={''}>{socialNames[key]}</span>
               </a>
             );

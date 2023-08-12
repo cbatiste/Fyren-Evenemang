@@ -20,8 +20,8 @@ export default function EventArchive(props) {
     <div className={'flex flex-col md:flex-row justify-center py-12'}>
       <div className={'flex order-2 pt-2 px-4 md:py-0 md:order-1 flex-col justify-center flex-1'}>
         <div className={'text-center md:text-left md:m-auto md:pb-4'}>
-          <h2 className={'text-3xl sm:text-4xl font-semibold'}>{title}</h2>
-          {location && <p className={'text-xl sm:text-2xl pt-2 sm:pt-4 pb-2'}>{location}</p>}
+          <h2 className={'text-3xl sm:text-4xl'}>{title}</h2>
+          {location && <p className={'text-xl sm:text-2xl hidden md:block pt-2 sm:pt-4 pb-2'}>{location}</p>}
         </div>
       </div>
       <div className={'order-1 md:order-2 self-center'}>
@@ -57,7 +57,8 @@ export default function EventArchive(props) {
         </div>
       </div>
       <div className={'flex order-3 pt-2 md:pl-4 md:py-0 flex-col justify-center flex-1 text-center'}>
-        <p className={'text-2xl md:text-3xl md:pb-6'}>{date}</p>
+        <p className={'text-2xl hidden md:block md:text-3xl md:pb-6'}>{date}</p>
+        <p className={'text-xl md:hidden md:pb-6'}>{location} – {date}</p>
 
         <div className={'block md:hidden pt-4'}>
           <a className={'text-xl font-semibold text-sky-500 cursor-pointer hover:text-sky-700'}

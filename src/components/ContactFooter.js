@@ -16,32 +16,32 @@ export default function ContactFooter() {
             <div>
               <a className={"inline-block mb-2"} href={"mailto:info@fyren.se"}>
                 <FaRegEnvelope className={"inline mr-4"}/><span className={'break-all'}>info@fyren.se</span></a>
-              <label className={"block text-sm text-slate-400 pl-9"}>(General information and questions)</label>
+              <label className={"block text-base text-slate-400 pl-9"}>(General information and questions)</label>
             </div>
             <div className={"pt-6"}>
               <a className={"inline-block mb-2"} href={"mailto:erik@kasizzle.se"}>
                 <FaRegEnvelope className={"inline mr-4"}/><span className={'break-all'}>erik@kasizzle.se</span></a>
-              <label className={"block text-sm text-slate-400 pl-9"}>(Erik Larsson, CEO)</label>
+              <label className={"block text-base text-slate-400 pl-9"}>(Erik Larsson, CEO)</label>
             </div>
             <div className={"pt-6"}>
               <a className={"inline-block mb-2"} href={"mailto:charles.batiste0@gmail.com"}>
                 <FaRegEnvelope className={"inline mr-4"}/><span
                 className={'break-all'}>charles.batiste0@gmail.com</span></a>
-              <label className={"block text-sm text-slate-400 pl-9"}>(Charles Batiste, CTO)</label>
+              <label className={"block text-base text-slate-400 pl-9"}>(Charles Batiste, CTO)</label>
             </div>
           </div>
           <div className={"text-lg sm:text-xl"}>
             <div>
               <p><FaPhone className={"inline mr-4"}/><span>+46 70 860 19 31</span></p>
-              <label className={"text-sm text-slate-400 pl-9"}>(Erik Larsson, CEO)</label>
+              <label className={"text-base text-slate-400 pl-9"}>(Erik Larsson, CEO)</label>
             </div>
             <div className={"pt-6"}>
               <p><FaPhone className={"inline mr-4"}/><span>+46 73 066 62 84</span></p>
-              <label className={"text-sm text-slate-400 pl-9"}>(Oscar Fredell, CFO)</label>
+              <label className={"text-base text-slate-400 pl-9"}>(Oscar Fredell, CFO)</label>
             </div>
             <div className={"pt-6"}>
               <p><FaPhone className={"inline mr-4"}/><span>+46 73 544 66 93</span></p>
-              <label className={"text-sm text-slate-400 pl-9"}>(Karl Bellander, Sales Representative)</label>
+              <label className={"text-base text-slate-400 pl-9"}>(Karl Bellander, Sales Representative)</label>
             </div>
           </div>
           <div className={'sm:pt-5 md:col-span-2 xl:col-span-1'}>

@@ -31,7 +31,8 @@ export default function Upcoming() {
             description: event.bookingDescription,
             buttonLabel: event.bookingButton,
             url: event.bookingURL,
-            email: event.bookingEmail
+            email: event.bookingEmail,
+            soldOut: event.bookingSoldOut
           };
 
           return (

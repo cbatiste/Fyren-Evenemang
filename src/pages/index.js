@@ -14,7 +14,7 @@ export const DataContext = createContext(null);
 
 export default function Home() {
   const eventsQuery = `*[_type == "event"] {
-    name, description, poster_caption, date, time, location, address, lineupArtists, lineupDJs, bookingDescription, bookingButton, bookingURL, bookingEmail, photosCredit,
+    name, description, poster_caption, date, time, location, address, lineupArtists, lineupDJs, bookingDescription, bookingButton, bookingSoldOut, bookingURL, bookingEmail, photosCredit,
     'poster': poster.asset -> {url, altText, 'dimensions': metadata.dimensions},
     'photoAlbum': photos[].asset -> {url, altText, 'dimensions': metadata.dimensions}
   }`;

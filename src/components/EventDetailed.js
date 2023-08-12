@@ -25,6 +25,23 @@ export default function EventDetailed(props) {
       window.location.href = `mailto:${booking.email.address}?subject=${booking.email.subject}&body=${booking.email.body.replace(/\n/g, '%0d%0a')}`;
     }
   }
+  console.log(props.booking);
+
+  const BookButton = () => (
+    <button
+      className={'border-[#2a64f6] text-[#2a64f6] mt-4 md:m-0 border-2 rounded px-4 py-2 text-xl hover:bg-[#ecf1f6]'}
+      onClick={() => {
+        handleBooking()
+      }}>
+      {booking.buttonLabel && booking.buttonLabel.toUpperCase()}
+    </button>
+  );
+
+  const SoldOutButton = () => (
+    <button
+      className={'border-zinc-300 text-zinc-400 mt-4 md:m-0 border-2 rounded px-4 py-2 text-xl cursor-default'}>SOLD
+      OUT</button>
+  );
 
   return (
     <div className={'flex flex-col md:flex-row justify-center py-12'}>
@@ -80,14 +97,10 @@ export default function EventDetailed(props) {
         </div>
         <div className={'md:ml-12'}>
           {description && <p className={'mb-6'} style={{whiteSpace: 'pre-wrap'}}>{description}</p>}
-          {booking.description && <p className={'mb-6'} style={{whiteSpace: 'pre-wrap'}}>{booking.description}</p>}
-          <button
-            className={'border-[#2a64f6] text-[#2a64f6] mt-4 md:m-0 border-2 rounded px-4 py-2 text-xl hover:bg-[#ecf1f6]'}
-            onClick={() => {
-              handleBooking()
-            }}>
-            <p>{booking.buttonLabel && booking.buttonLabel.toUpperCase()}</p>
-          </button>
+          {(booking.description && !booking.soldOut) &&
+            <p className={'mb-6'} style={{whiteSpace: 'pre-wrap'}}>{booking.description}</p>}
+
+          {booking.soldOut ? <SoldOutButton/> : <BookButton/>}
         </div>
       </div>
     </div>

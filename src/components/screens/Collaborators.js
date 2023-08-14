@@ -16,11 +16,11 @@ function CollabCard(props) {
   }
 
   return (
-    <div className={'flex items-center mx-2 md:my-3 md:mx-5 lg:my-4 lg:mx-8 min-h-[150px] scale-90 md:scale-100'}>
+    <div className={'flex items-center mx-2 md:my-3 md:mx-5 lg:my-4 lg:mx-8 min-h-[160px] scale-90 md:scale-100'}>
       <a href={collaborator.url} target={'_blank'}>
         <Image src={logo.url} alt={collaborator.name}
                width={logoDimensions.width} height={logoDimensions.height}
-               className={'max-w-[320px] max-h-[140px] md:max-h-[160px] hover:scale-105 transition ease-in-out duration-200 cursor-pointer'}
+               className={'hover:scale-105 transition ease-in-out duration-200 cursor-pointer'}
         />
       </a>
     </div>

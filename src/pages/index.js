@@ -19,14 +19,20 @@ export default function Home() {
     'photoAlbum': photos[].asset -> {url, altText, 'dimensions': metadata.dimensions}
   }`;
 
-  let teamMembersQuery = `*[_type == "teamMember"]{
+  const teamMembersQuery = `*[_type == "teamMember"] {
     name, position, description, email, linkedin, instagram, facebook, website, spotify, appleMusic,
     'photo': photo.asset -> {url, altText, 'dimensions': metadata.dimensions}
   }`;
 
-  let eventData = useSanityQuery(eventsQuery);
+  const collaboratorsQuery = `*[_type == "collaborator"] {
+    _createdAt, name, url, order,
+    'logo': logo.asset -> {url, altText, 'dimensions': metadata.dimensions}
+  }`;
+
+  let eventsData = useSanityQuery(eventsQuery);
   let teamMembersData = useSanityQuery(teamMembersQuery);
-  let apiData = {events: eventData, teamMembers: teamMembersData};
+  let collaboratorsData = useSanityQuery(collaboratorsQuery);
+  let apiData = {events: eventsData, teamMembers: teamMembersData, collaborators: collaboratorsData};
 
   const navigationScreens = [
     {id: "upcoming", title: "UPCOMING", component: <UpcomingScreen/>},

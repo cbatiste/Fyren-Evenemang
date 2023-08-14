@@ -8,7 +8,7 @@ import {SanityClient} from 'components/utility/SanityClient';
 const ImageBuilder = imageUrlBuilder(SanityClient);
 const image = url => ImageBuilder.image(url);
 
-function GalleryImage({index, photo, top, left, direction}) {
+function GalleryImage({index, photo}) {
   let [loaded, setLoaded] = useState(false);
 
   return (
@@ -43,8 +43,6 @@ export default function PhotoWallOverlay(props) {
         key={key}
         index={index}
         photo={photo}
-        left={left}
-        top={top}
       />
     );
   }

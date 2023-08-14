@@ -89,7 +89,7 @@ export default function Navigator({screens}) {
                   animate={'open'}
                   exit={'collapsed'}
                   variants={contentAnimation}
-                  transition={{duration: 0.5, ease: 'easeInOut'}}
+                  transition={{duration: 0.8, ease: 'easeInOut'}}
                   onAnimationComplete={() => setSelectDisabled(false)}
                 >
                   {screen.component}

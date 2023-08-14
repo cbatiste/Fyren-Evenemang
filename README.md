@@ -41,4 +41,4 @@ npx sanity deploy
 
 ### Todo:
 
-- Nothing left!
+- Sanity CMS for collaborators

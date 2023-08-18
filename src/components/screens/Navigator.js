@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {AnimatePresence, motion} from "framer-motion";
+import React, { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function SectionHeader({title, active, onSelect}) {
   const [isActive, setActive] = useState(active);
@@ -10,7 +10,7 @@ function SectionHeader({title, active, onSelect}) {
 
   return (
     <h3
-      className={`inline-block text-4xl sm:text-5xl py-2 sm:py-3 cursor-pointer select-none`}
+      className={`inline-block text-4xl sm:text-5xl py-2 sm:py-3 pl-1 cursor-pointer select-none`}
       onClick={(e) => {
         onSelect(e);
       }}

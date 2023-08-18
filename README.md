@@ -2,12 +2,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Fyren Evenemang
 
-Repository for event company Fyren Evenemang (Kasizzle AB), Stockholm, SE.
+Repository of event company Fyren Evenemang (Kasizzle AB), Stockholm, SE.
 This repository contains unbuilt React/Next.js source files.
 
 Active deployments:
-- Final: [kasizzle.se](https://kasizzle.se) (soon: [fyrenevemang.se](https://fyrenevenemang.se))
-- Github pages: [cbatiste.github.io](https://cbatiste.github.io)
+
+- Final: [fyrenevenemang.se](https://fyrenevenemang.se)
+- GitHub pages: [cbatiste.github.io](https://cbatiste.github.io) -- INACTIVE
 - Content management system (CMS): [fyren.sanity.studio](https://fyren.sanity.studio)
 
 Commands for Next.js:
@@ -41,4 +42,4 @@ npx sanity deploy
 
 ### Todo:
 
-- Sanity CMS for collaborators
+- Sanity CMS for collaborators DONE

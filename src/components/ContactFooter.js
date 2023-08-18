@@ -1,4 +1,4 @@
-import {FaInstagram, FaPhone, FaRegEnvelope, FaTiktok} from "react-icons/fa";
+import { FaInstagram, FaPhone, FaRegEnvelope, FaTiktok } from 'react-icons/fa';
 
 export default function ContactFooter() {
   return (
@@ -14,9 +14,10 @@ export default function ContactFooter() {
           </div>
           <div className={"text-lg sm:text-xl"}>
             <div>
-              <a className={"inline-block mb-2"} href={"mailto:info@fyren.se"}>
-                <FaRegEnvelope className={"inline mr-4"}/><span className={'break-all'}>info@fyren.se</span></a>
-              <label className={"block text-base text-slate-400 pl-9"}>(General information and questions)</label>
+              <a className={'inline-block mb-2'} href={'mailto:info@fyren.se'}>
+                <FaRegEnvelope className={'inline mr-4'} /><span
+                className={'break-all'}>info@fyrenevenemang.se</span></a>
+              <label className={'block text-base text-slate-400 pl-9'}>(General information and questions)</label>
             </div>
             <div className={"pt-6"}>
               <a className={"inline-block mb-2"} href={"mailto:erik@kasizzle.se"}>
@@ -24,10 +25,10 @@ export default function ContactFooter() {
               <label className={"block text-base text-slate-400 pl-9"}>(Erik Larsson, CEO)</label>
             </div>
             <div className={"pt-6"}>
-              <a className={"inline-block mb-2"} href={"mailto:charles.batiste0@gmail.com"}>
-                <FaRegEnvelope className={"inline mr-4"}/><span
-                className={'break-all'}>charles.batiste0@gmail.com</span></a>
-              <label className={"block text-base text-slate-400 pl-9"}>(Charles Batiste, CTO)</label>
+              <a className={'inline-block mb-2'} href={'mailto:charles.batiste0@gmail.com'}>
+                <FaRegEnvelope className={'inline mr-4'} /><span
+                className={'break-all'}>charles@fyrenevenemang.se</span></a>
+              <label className={'block text-base text-slate-400 pl-9'}>(Charles Batiste, CTO)</label>
             </div>
           </div>
           <div className={"text-lg sm:text-xl"}>

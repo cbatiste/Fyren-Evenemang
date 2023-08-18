@@ -1,7 +1,7 @@
-import 'styles/globals.css'
-import Head from "next/head";
+import 'styles/globals.css';
+import Head from 'next/head';
 import localFont from 'next/font/local';
-import {Inconsolata} from 'next/font/google';
+import { Inconsolata } from 'next/font/google';
 
 const QuartoFont = localFont({
   src: '../assets/QuartoRegular.ttf',
@@ -23,7 +23,7 @@ export default function App({Component, pageProps}) {
 
         h1, h2, h3, h4, h5, h6 {
           font-family: ${QuartoFont.style.fontFamily};
-          letter-spacing: 0.6px;
+          letter-spacing: 1.0px;
         }
       `}</style>
         <Component {...pageProps} />

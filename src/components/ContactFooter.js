@@ -14,7 +14,7 @@ export default function ContactFooter() {
           </div>
           <div className={'text-lg sm:text-xl'}>
             <div>
-              <a className={'inline-block mb-2'} href={'mailto:info@fyren.se'}>
+              <a className={'inline-block mb-2'} href={'mailto:info@fyrenevenemang.se'}>
                 <FaRegEnvelope className={'inline mr-4'} /><span
                 className={'break-all'}>info@fyrenevenemang.se</span></a>
               <label className={'block text-base text-slate-400 pl-9'}>(General information and questions)</label>
@@ -25,7 +25,7 @@ export default function ContactFooter() {
               <label className={'block text-base text-slate-400 pl-9'}>(Erik Larsson, CEO)</label>
             </div>
             <div className={'pt-6'}>
-              <a className={'inline-block mb-2'} href={'mailto:charles.batiste0@gmail.com'}>
+              <a className={'inline-block mb-2'} href={'mailto:charles@fyrenevenemang.se'}>
                 <FaRegEnvelope className={'inline mr-4'} /><span
                 className={'break-all'}>charles@fyrenevenemang.se</span></a>
               <label className={'block text-base text-slate-400 pl-9'}>(Charles Batiste, CTO)</label>

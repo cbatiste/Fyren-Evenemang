@@ -54,12 +54,12 @@ function Profile({name, position, description, image, social}) {
       </div>
 
       <div className={'self-center order-1 md:order-2 md:basis-1/4 p-4'}>
-        <DynamicImage
+        {image && <DynamicImage
           className={'m-auto min-w-[200px] max-w-[60%] sm:max-w-[280px] lg:max-w-none'}
           src={image}
           alt={`Photo of ${name}`}
           defaultHeight={250}
-        />
+        />}
       </div>
     </div>
   );
@@ -77,7 +77,7 @@ export default function About() {
               name={member.name}
               position={member.position}
               description={member.description}
-              image={member.photo.url}
+              image={member.photo?.url}
               social={{
                 email: member.email,
                 linkedin: member.linkedin,
